@@ -2,5 +2,5 @@
 ## Ver estado del repositorio: git status
 ## Agregar cambios al staging: git add .
 ## Guardar cambios en el reposiorio local: git commit -m "comentario"
-## Ver historico de cambios: git log
-## 
+## Ver historico de cambios: git log 
+##  
