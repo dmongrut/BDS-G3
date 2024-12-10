@@ -1,0 +1,4 @@
+tipo_cambio_compra = 3.7
+tipo_cambio_venta = 3.8
+
+importe = int(input())
