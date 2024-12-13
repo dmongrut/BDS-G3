@@ -1,9 +1,8 @@
-#TUPLAS: IGUAL A LAS LISTAS PERO INMUTABLES
 dias = ("lunes","martes","miercoles","jueves")
 print(dias)
 print(type(dias))
 
-#PARA AGREGAR DATOS CONVERTIMOS LA TUPLA EN LISTA
+#Para agregar datos convertimos la tupla en lista
 print("=" * 20)
 dias = list(dias)
 print(type(dias))
@@ -14,10 +13,8 @@ print("=" * 20)
 dias = tuple(dias)
 print(type(dias))
 
-
-#Recorrer una tupla (es igual a recorrer una lista)
+#Recorrer una tupla(es igual a recorrer una lista)
 print("=" * 20)
 for dia in dias:
-    print(dia)
-
+  print(dia)
 

@@ -1,6 +1,6 @@
-#CRUD DE EMPRESA CON RUC, RAZON SOCIAL Y DIRECCION
+# CRUD PARA UNA EMPRESA: RUC, RAZON SOCIAL Y DIRECCION
 
-# Importar librerías
+# Importar las librerías
 import os
 from time import sleep
 
@@ -12,15 +12,15 @@ dic_empresas = {
     }
 }
 
-# Definicion de cada uno de los CRUD:
+# Definir cada uno de los CRUD:
 ancho_titulo = 50
 opcion = 0
 
 while (opcion < 5):
     os.system('clear')
-    print("*"*ancho_titulo)
-    print(" "*10 + "ADMINISTRACION DE LA EMPRESA")
-    print("*"*ancho_titulo)
+    print("*" * ancho_titulo)
+    print(" " * 10 + "ADMINISTRACION DE LA EMPRESA")
+    print("*" * ancho_titulo)
     print("""
          [1] REGISTRAR EMPRESA
          [2] MOSTRAR EMPRESA
@@ -28,14 +28,15 @@ while (opcion < 5):
          [4] ELIMINAR EMPRESA
          [5] SALIR
           """)
+    
     print("*" * ancho_titulo)
     opcion = int(input("INGRESE UNA OPCION : "))
     os.system("clear")
 
     if opcion == 1:
-        print("*"*ancho_titulo)
-        print(" "*10 + "REGISTRAR EMPRESA")
-        print("*"*ancho_titulo)
+        print("*" * ancho_titulo)
+        print(" " * 10 + "REGISTRAR EMPRESA")
+        print("*" * ancho_titulo)
         ruc = input("Ingrese el RUC de la empresa: ")
         razon_social = input("Ingrese la razón social: ")
         direccion = input("Ingrese la dirección: ")
@@ -46,6 +47,7 @@ while (opcion < 5):
             }
         }
         dic_empresas.update(dic_nuevo_empresa)
+
     elif opcion == 2:
         print("*" * ancho_titulo)
         print(" " * 10 + "[2] MOSTRAR EMPRESA")
@@ -55,6 +57,7 @@ while (opcion < 5):
             print(f"Razon Social : {datos['razon_social']}")
             print(f"Dirección : {datos['direccion']}")
             print("*"*ancho_titulo)
+
     elif opcion == 3:
         print("*" * ancho_titulo)
         print(" " * 10 + "[3] ACTUALIZAR EMPRESA")
@@ -73,6 +76,7 @@ while (opcion < 5):
             }
             dic_empresas.update(dic_act_empresa)
             print("LOS DATOS DE LA EMPRESA FUERON ACTUALIZADOS")
+
     elif opcion == 4:
         print("*" * ancho_titulo)
         print(" " * 10 + "[4] ELIMINAR EMPRESA")
@@ -83,10 +87,12 @@ while (opcion < 5):
             print("LA EMPRESA FUE ELIMINADA")
         else:
             print("NO SE ENCONTRO EL RUC ESPECIFICADO")
+
     elif opcion == 5:
         print("*" * ancho_titulo)
         print(" " * 10 + "[5] SALIR")
         print("*" * ancho_titulo)
+        
     else:
         print("*" * ancho_titulo)
         print(" " * 10 + "OPCIÓN NO VALIDA!!!")

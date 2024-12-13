@@ -1,6 +1,8 @@
 # Comandos basicos
 ## Ver estado del repositorio: git status
+## Cambiar al directorio que voy a llegar a Github
 ## Agregar cambios al staging: git add .
+## Ver estiatus: git status
 ## Guardar cambios en el reposiorio local: git commit -m "comentario"
 ## Ver historico de cambios: git log 
-##  
+## Enviar a Repositorio remoto de Github: git push origin Main .... (git push -f origin Main)

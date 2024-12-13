@@ -11,7 +11,6 @@ bandera = True
 
 #PROCESO
 while (bandera):
-  os.system("clear")
   print("""
         ======================================================
                     CONVERTIDOR DE MONEDAS
@@ -23,7 +22,7 @@ while (bandera):
                 """)
   
   opcion = int(input("Elija una opcion: "))
-  os.system("clear") 
+  os.system("cls") 
 
   if(opcion == 1):
       print("""
@@ -55,7 +54,7 @@ while (bandera):
       break
   
   sleep(2)
-  os.system("clear")
+  os.system("cls")
 
 #SALIDA
 
