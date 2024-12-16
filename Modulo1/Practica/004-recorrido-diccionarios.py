@@ -17,17 +17,17 @@ capitales = {
 print(" " * 16 + "RECORRIDO POR CLAVES")
 for clave in capitales.keys():
   print(clave)
-sleep(1)
+sleep(2)
 #os.system("clear")
 
 #Recorrido por Valores
 print(" " * 16 + "RECORRIDO POR VALORES")
 for valor in capitales.values():
   print(valor)
-sleep(1)
+sleep(2)
 
 #Recorrido por Clave y Valor
 print(" " * 13 + "RECORRIDO POR CLAVE Y VALOR")
 for clave,valor in capitales.items():
   print(f"La capital de {clave} es {valor}")
-sleep(1)
+sleep(2)
