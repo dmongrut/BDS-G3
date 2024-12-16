@@ -3,14 +3,14 @@ dic_empresas = {}
 def cargar_empresas(nombre_archivo):
     archivo = open(nombre_archivo,'r')
     str_empresas = archivo.read()
-    print(str_empresas)
+    print("1", str_empresas)
     archivo.close()
 
     lista_empresas = str_empresas.splitlines()
-    print(lista_empresas)
+    print("2", lista_empresas)
     for str_fila in lista_empresas:
         lista_fila = str_fila.split(',')
-        print(lista_fila)
+        print("3", lista_fila)
         dic_registro = {
            'razon_social':lista_fila[1],
            'direccion' :lista_fila[2]
@@ -22,7 +22,7 @@ def cargar_empresas(nombre_archivo):
 
 
 cargar_empresas('empresas.txt')
-print(dic_empresas)
+print("4",dic_empresas)
 
 dic_empresas = {
     '1010' : {

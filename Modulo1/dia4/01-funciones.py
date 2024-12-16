@@ -1,19 +1,14 @@
-def sumar(n1, n2):
-    resultado = n1 + n2 
+def sumar(n1,n2):
+    resultado = n1 + n2
     return resultado
 
-
-def sumar_con_mensaje(n1, n2):
+def sumar_con_mensaje(n1,n2):
     resultado = int(n1) + int(n2)
-    print(f"SUMA CON MENSAJE: la suma de {n1} + {n2} es {resultado}")
+    print(f'SUMA CON MENSAJE: La suma de {n1} + {n2} es {resultado}')
 
 
-n1 = input("Ingrese numero1: ")
-n2 = input("Ingrese numero2: ")
-
-suma = sumar(int(n1), int(n2))
-print(f"La suma de {n1} + {n2} es {suma}")
-
+n1 = input("ingrese nro 1 : ")
+n2 = input("ingrese nro 2 : ")
+suma = sumar(int(n1),int(n2))
+print(f'La suma de {n1} + {n2} es {suma}')
 sumar_con_mensaje(n1,n2)
-
-#print(sumar(50,70))

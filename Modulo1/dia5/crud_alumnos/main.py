@@ -1,6 +1,7 @@
 import os
 from time import sleep
-from matriculas.lib_alumnos import *
+from lib_alumnos import *
+
 
 """
 CRUD
