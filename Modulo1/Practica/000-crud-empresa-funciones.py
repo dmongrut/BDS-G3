@@ -8,6 +8,8 @@ from crudempresa.lib_crudempresa import *
 # Definir las variables del CRUD:
 opcion = 0
 
+
+
 #Definir el menu
 while (opcion < 5):
     os.system('clear')
