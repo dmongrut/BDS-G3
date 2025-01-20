@@ -1,2 +1,3 @@
 este es mi primer archivo de git
 acabo de hacer mi primer commit :) ... OK luego de 2 veces 2 commit
+La hora es 06:33
