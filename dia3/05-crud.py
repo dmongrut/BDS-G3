@@ -1,5 +1,6 @@
 import os
 from time import sleep
+
 """
 CRUD
   - CREATE
@@ -37,10 +38,26 @@ while(opcion < 5):
     print("=" * ANCHO)
     print(" " * 10 + "[1] REGISTRAR ALUMNO")
     print("*" * ANCHO)
+    dni = input("DNI  :")
+    nombre = input("NOMBRE  :")
+    email = input("EMAIL :")
+    dic_nuevo_alumno = {
+      dni : {
+        "nombre": nombre,
+        "email": email
+      }
+    }
+    dic_alumnos.update(dic_nuevo_alumno)
   elif opcion == 2:
     print("=" * ANCHO)
     print(" " * 10 + "[2] MOSTRAR ALUMNO")
     print("*" * ANCHO)
+    for dni,datos in dic_alumnos.items():
+      print(f"DNI: {dni}")
+      print(f"Nombre: {datos['nombre']}")
+      print(f"EMAIL: {datos['email']}")
+      print("*" * ANCHO)
+    input("Presione ENTER para continuar...")
   elif opcion == 3:
     print("=" * ANCHO)
     print(" " * 10 + "[3] ACTUALIZAR ALUMNO")
