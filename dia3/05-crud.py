@@ -80,6 +80,10 @@ while(opcion < 5):
     print("=" * ANCHO)
     print(" " * 10 + "[4] ELIMINAR ALUMNO")
     print("*" * ANCHO)
+    dni = input("INGRESE EL DNI DEL ALUMNO A ELIMINAR : ")
+    if dni in dic_alumnos:
+      dic_alumnos.pop(dni)
+      print("ALUMNO ELIMINADO")
   elif opcion == 5:
     print("=" * ANCHO)
     print(" " * 10 + "[5] SALIR")
