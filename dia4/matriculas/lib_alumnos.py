@@ -13,32 +13,66 @@ def menu(ANCHO):
   print("=" * ANCHO)
   
 def registrar(ANCHO):
-    print("=" * ANCHO)
-    print(" " * 10 + "[1] REGISTRAR ALUMNO")
-    print("*" * ANCHO)
-    dni = input("DNI  :")
-    nombre = input("NOMBRE  :")
-    email = input("EMAIL :")
-    dic_nuevo_alumno = {
-      dni : {
-        "nombre": nombre,
-        "email": email
-      }
+  print("=" * ANCHO)
+  print(" " * 10 + "[1] REGISTRAR ALUMNO")
+  print("*" * ANCHO)
+  dni = input("DNI  :")
+  nombre = input("NOMBRE  :")
+  email = input("EMAIL :")
+  dic_nuevo_alumno = {
+    dni : {
+      "nombre": nombre,
+      "email": email
     }
-    return dic_nuevo_alumno
+  }
+  return dic_nuevo_alumno
 
 def mostrar(ANCHO, dic_alumnos):
-    print("=" * ANCHO)
-    print(" " * 10 + "[2] MOSTRAR ALUMNO")
+  print("=" * ANCHO)
+  print(" " * 10 + "[2] MOSTRAR ALUMNO")
+  print("*" * ANCHO)
+  for dni,datos in dic_alumnos.items():
+    print(f"DNI: {dni}")
+    print(f"Nombre: {datos['nombre']}")
+    print(f"EMAIL: {datos['email']}")
     print("*" * ANCHO)
-    for dni,datos in dic_alumnos.items():
-      print(f"DNI: {dni}")
-      print(f"Nombre: {datos['nombre']}")
-      print(f"EMAIL: {datos['email']}")
-      print("*" * ANCHO)
       
-def actualizar(ANCHO):
-    pass
+def actualizar(ANCHO, dic_alumnos):
+  print("=" * ANCHO)
+  print(" " * 10 + "[3] ACTUALIZAR ALUMNO")
+  print("*" * ANCHO)
+  dni = input("INGRESE DNI DEL ALUMNO A ACTUALIZAR")
+  if dni in dic_alumnos:
+    print(f"ALUMNO A ACTUALIZAR {dic_alumnos[dni]['nombre']}")
+    nuevo_nombre = input("NOMBRE : ")
+    nuevo_dni = input("DNI : ")
+    nuevo_email = input("EMAIL : ")
+    dic_act_alumno = {
+      dni : {
+          "nombre" : nuevo_nombre,
+          "email"  : nuevo_email
+      }
+    }
+    dic_alumnos.update(dic_act_alumno)
+    print("ALUMNO ACTUALIZADO CON EXITO")
   
-def eliminar(ANCHO):
-    pass
+def eliminar(ANCHO, dic_alumnos):
+  print("=" * ANCHO)
+  print(" " * 10 + "[4] ELIMINAR ALUMNO")
+  print("*" * ANCHO)
+  dni = input("INGRESE EL DNI DEL ALUMNO A ELIMINAR : ")
+  if dni in dic_alumnos:
+    dic_alumnos.pop(dni)
+    print("ALUMNO ELIMINADO")
+  else:
+    print("NO SE ENCONTRO EL ALUMNO")
+
+def salir(ANCHO):
+  print("=" * ANCHO)
+  print(" " * 10 + "[5] SALIR")
+  print("*" * ANCHO)
+
+def mostrar_mensaje_invalida(ANCHO):
+  print("=" * ANCHO)
+  print(" " * 10 + "OPCION INVALIDA!!!")
+  print("*" * ANCHO)

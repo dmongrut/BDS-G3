@@ -32,38 +32,11 @@ while(opcion < 5):
     mostrar(ANCHO, dic_alumnos)
     input("Presione ENTER para continuar...")
   elif opcion == 3:
-    print("=" * ANCHO)
-    print(" " * 10 + "[3] ACTUALIZAR ALUMNO")
-    print("*" * ANCHO)
-    dni = input("INGRESE DNI DEL ALUMNO A ACTUALIZAR")
-    if dni in dic_alumnos:
-      print(f"ALUMNO A ACTUALIZAR {dic_alumnos[dni]['nombre']}")
-      nuevo_nombre = input("NOMBRE : ")
-      nuevo_dni = input("DNI : ")
-      nuevo_email = input("EMAIL : ")
-      dic_act_alumno = {
-        dni : {
-            "nombre" : nuevo_nombre,
-            "email"  : nuevo_email
-        }
-      }
-      dic_alumnos.update(dic_act_alumno)
-      print("ALUMNO ACTUALIZADO CON EXITO")
+    actualizar(ANCHO, dic_alumnos)    
   elif opcion == 4:
-    print("=" * ANCHO)
-    print(" " * 10 + "[4] ELIMINAR ALUMNO")
-    print("*" * ANCHO)
-    dni = input("INGRESE EL DNI DEL ALUMNO A ELIMINAR : ")
-    if dni in dic_alumnos:
-      dic_alumnos.pop(dni)
-      print("ALUMNO ELIMINADO")
+    eliminar(ANCHO, dic_alumnos)    
   elif opcion == 5:
-    print("=" * ANCHO)
-    print(" " * 10 + "[5] SALIR")
-    print("*" * ANCHO)    
+    salir(ANCHO)
   else:
-    print("=" * ANCHO)
-    print(" " * 10 + "OPCION INVALIDA!!!")
-    print("*" * ANCHO)
-  
+    mostrar_mensaje_invalida()
   sleep(1)
